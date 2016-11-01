@@ -358,7 +358,9 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="RqU-X7-agN"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36a-br-Zdj"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36a-br-Zdj">
+                                <frame key="frameInset" minY="116" width="375" height="543"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -371,7 +373,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="historyUIScrollView" destination="36a-br-Zdj" id="FZg-Lz-YLW"/>
+                        <outlet property="history" destination="36a-br-Zdj" id="HKP-Si-ieb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2w-Pb-SkK" userLabel="First Responder" sceneMemberID="firstResponder"/>

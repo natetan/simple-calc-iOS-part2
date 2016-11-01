@@ -22,10 +22,10 @@ class HistoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var historyUIScrollView: UIScrollView!
+    @IBOutlet weak var history: UIScrollView!
     
     public func addLabel(label: UILabel) {
-        historyUIScrollView.addSubview(label)
+        history.addSubview(label) // error is here. history is nil?
     }
 }
 
