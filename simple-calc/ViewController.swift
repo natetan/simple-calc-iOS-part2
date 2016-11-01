@@ -148,6 +148,12 @@ class ViewController: UIViewController {
             display.text = String(fact(num: Int(parts[0])!))
         }
         
+        let label = UILabel()
+        label.text = currentText
+        print(label.text)
+        let history = HistoryViewController()
+        history.addLabel(label: label)
+        
         currentText = ""
     }
     
