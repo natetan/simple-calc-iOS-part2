@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -290,16 +291,16 @@
                                 </constraints>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="4"/>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-np-g4X">
-                                <frame key="frameInset" maxY="554"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-np-g4X">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="JvG-84-Itn"/>
+                                </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="65"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-a9-bgz">
-                                <frame key="frameInset" minY="190" width="28.17%" height="11.91%" maxX="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-a9-bgz">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="history">
@@ -313,9 +314,14 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6bA-7w-YxE" secondAttribute="bottom" constant="16" id="AuD-Dr-r0y"/>
-                            <constraint firstItem="6bA-7w-YxE" firstAttribute="top" secondItem="1aR-np-g4X" secondAttribute="bottom" constant="120" id="GvI-uG-CKH"/>
+                            <constraint firstItem="1aR-np-g4X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EIF-Bk-vtM"/>
+                            <constraint firstItem="1aR-np-g4X" firstAttribute="trailing" secondItem="DFT-a9-bgz" secondAttribute="trailing" id="Hdk-iD-dvE"/>
+                            <constraint firstItem="1aR-np-g4X" firstAttribute="centerX" secondItem="6bA-7w-YxE" secondAttribute="centerX" id="Kmc-2Y-dOm"/>
                             <constraint firstAttribute="trailing" secondItem="6bA-7w-YxE" secondAttribute="trailing" constant="16" id="Zcb-x4-dbc"/>
                             <constraint firstItem="6bA-7w-YxE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="eOI-B4-I3H"/>
+                            <constraint firstItem="6bA-7w-YxE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1aR-np-g4X" secondAttribute="bottom" constant="60" id="o2O-bQ-Vf0"/>
+                            <constraint firstItem="6bA-7w-YxE" firstAttribute="top" secondItem="DFT-a9-bgz" secondAttribute="bottom" constant="8" symbolic="YES" id="oJz-ed-qtk"/>
+                            <constraint firstItem="1aR-np-g4X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="oxT-Ay-gpp"/>
                         </constraints>
                     </view>
                     <connections>
