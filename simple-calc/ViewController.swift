@@ -150,8 +150,10 @@ class ViewController: UIViewController {
         
         let label = UILabel()
         label.text = currentText + " = " + display.text
+        print(label)
         print(label.text)
         let history = HistoryViewController()
+        print(history)
         history.addLabel(label: label)
         
         currentText = ""

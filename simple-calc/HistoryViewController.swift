@@ -16,7 +16,6 @@ class HistoryViewController: UIViewController {
 
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -25,6 +24,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var history: UIScrollView!
     
     public func addLabel(label: UILabel) {
+        print(history)
         history.addSubview(label) // error is here. history is nil?
     }
 }
