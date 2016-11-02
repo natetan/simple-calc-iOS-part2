@@ -335,7 +335,7 @@
         <!--History View Controller-->
         <scene sceneID="tnG-Ea-Pw9">
             <objects>
-                <viewController id="GYy-1A-rv0" customClass="HistoryViewController" customModule="simple_calc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="historyView" id="GYy-1A-rv0" customClass="HistoryViewController" customModule="simple_calc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hb8-n2-c3j"/>
                         <viewControllerLayoutGuide type="bottom" id="sVS-7i-xoY"/>
@@ -355,25 +355,34 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="RqU-X7-agN"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36a-br-Zdj"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jLr-vv-Zpf">
+                                <frame key="frameInset" minY="182" width="414" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="History (as we know it)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcd-6g-SMz">
+                                <frame key="frameInset" minX="98" minY="92" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UBl-Jg-rKm" firstAttribute="leading" secondItem="Hpn-QX-hJq" secondAttribute="leading" id="IFe-Tf-Xm3"/>
-                            <constraint firstItem="sVS-7i-xoY" firstAttribute="top" secondItem="36a-br-Zdj" secondAttribute="bottom" constant="8" symbolic="YES" id="MLO-Rh-q4F"/>
-                            <constraint firstItem="36a-br-Zdj" firstAttribute="top" secondItem="UBl-Jg-rKm" secondAttribute="bottom" constant="32" id="p4n-YJ-YBN"/>
                             <constraint firstItem="UBl-Jg-rKm" firstAttribute="top" secondItem="hb8-n2-c3j" secondAttribute="bottom" constant="8" symbolic="YES" id="rxq-t0-RTk"/>
-                            <constraint firstAttribute="trailing" secondItem="36a-br-Zdj" secondAttribute="trailing" id="sKl-lL-NkE"/>
-                            <constraint firstItem="UBl-Jg-rKm" firstAttribute="leading" secondItem="36a-br-Zdj" secondAttribute="leading" id="y5A-m9-hX0"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="history" destination="36a-br-Zdj" id="gOF-Ur-Tyz"/>
+                        <outlet property="historyField" destination="jLr-vv-Zpf" id="D3O-xm-cLV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2w-Pb-SkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="124"/>
+            <point key="canvasLocation" x="737.68115942028987" y="123.91304347826087"/>
         </scene>
     </scenes>
 </document>

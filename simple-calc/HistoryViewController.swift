@@ -20,12 +20,10 @@ class HistoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBOutlet weak var history: UIScrollView!
+    @IBOutlet weak var historyField: UITextView!
     
-    public func addLabel(label: UILabel) {
-        print("history is printed: \(history)")
-        history.addSubview(label) // error is here. history is nil?
+    public func addLabel(label: String) {
+        historyField.text = historyField.text + label + "\n"
     }
 }
 

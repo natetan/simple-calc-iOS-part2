@@ -148,13 +148,15 @@ class ViewController: UIViewController {
             display.text = String(fact(num: Int(parts[0])!))
         }
         
-        let label = UILabel()
-        label.text = currentText + " = " + display.text
-        print(label)
-        print(label.text)
-        let history = HistoryViewController()
+        // let label = UILabel()
+        // label.text = currentText + " = " + display.text
+        let text = currentText + " = " + display.text
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let history = storyBoard.instantiateViewController(withIdentifier: "historyView") as! HistoryViewController
+        self.present(history, animated:true, completion:nil)
         print(history)
-        history.addLabel(label: label)
+        history.addLabel(label: text)
         
         currentText = ""
     }
