@@ -24,7 +24,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var history: UIScrollView!
     
     public func addLabel(label: UILabel) {
-        print(history)
+        print("history is printed: \(history)")
         history.addSubview(label) // error is here. history is nil?
     }
 }
